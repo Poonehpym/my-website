@@ -70,3 +70,40 @@ input {
     font-weight: bold;
     color: #5c3d99;
 }
+.todo-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.todo-row button {
+    width: auto;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    background-color: white;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+#taskList li.done {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.delete-btn {
+    background-color: transparent;
+    color: #d6336c;
+    padding: 4px 8px;
+}

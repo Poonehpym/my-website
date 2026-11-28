@@ -2,6 +2,7 @@ let input = document.getElementById("taskInput");
 let addBtn = document.getElementById("addBtn");
 let list = document.getElementById("taskList");
 let counter = document.getElementById("taskCounter");
+let clearAllBtn = document.getElementById("clearAllBtn");
 
 function updateCounter() {
     let tasks = list.querySelectorAll("li");
@@ -46,6 +47,11 @@ function addTask() {
 }
 
 addBtn.addEventListener("click", addTask);
+
+clearAllBtn.addEventListener("click", function () {
+    list.innerHTML = "";
+    updateCounter();
+});
 
 input.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {

@@ -108,6 +108,11 @@ input {
     padding: 4px 8px;
 }
 
+.clear-all-btn {
+    display: block;
+    margin: 0 0 20px;
+}
+
 #taskCounter {
     color: #5c3d99;
     font-size: 14px;

@@ -118,3 +118,68 @@ input {
     font-size: 14px;
     margin: 10px 0 20px;
 }
+
+.service-list {
+    display: grid;
+    gap: 8px;
+}
+
+.service-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    font-weight: normal;
+    margin: 0;
+}
+
+.service-option input {
+    width: auto;
+    margin: 0;
+}
+
+.time-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.time-btn {
+    padding: 10px 4px;
+}
+
+.time-btn.selected {
+    background-color: #5c3d99;
+}
+
+.time-btn.booked,
+.time-btn:disabled {
+    background-color: #aaa;
+    color: #eee;
+    cursor: not-allowed;
+}
+
+.reserve-btn {
+    width: 100%;
+    margin: 8px 0 16px;
+}
+
+.booking-error {
+    color: #b00020;
+    min-height: 20px;
+}
+
+.booking-success {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .time-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

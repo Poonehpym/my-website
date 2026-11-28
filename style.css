@@ -107,3 +107,9 @@ input {
     color: #d6336c;
     padding: 4px 8px;
 }
+
+#taskCounter {
+    color: #5c3d99;
+    font-size: 14px;
+    margin: 10px 0 20px;
+}

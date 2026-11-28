@@ -1,6 +1,20 @@
 let input = document.getElementById("taskInput");
 let addBtn = document.getElementById("addBtn");
 let list = document.getElementById("taskList");
+let counter = document.getElementById("taskCounter");
+
+function updateCounter() {
+    let tasks = list.querySelectorAll("li");
+    let tasksLeft = 0;
+
+    tasks.forEach(function (task) {
+        if (!task.classList.contains("done")) {
+            tasksLeft++;
+        }
+    });
+
+    counter.textContent = tasksLeft + (tasksLeft === 1 ? " task left" : " tasks left");
+}
 
 function addTask() {
     let text = input.value.trim();
@@ -13,6 +27,7 @@ function addTask() {
 
     li.addEventListener("click", function () {
         li.classList.toggle("done");
+        updateCounter();
     });
 
     let deleteBtn = document.createElement("button");
@@ -21,11 +36,13 @@ function addTask() {
     deleteBtn.addEventListener("click", function (event) {
         event.stopPropagation();
         li.remove();
+        updateCounter();
     });
 
     li.appendChild(deleteBtn);
     list.appendChild(li);
     input.value = "";
+    updateCounter();
 }
 
 addBtn.addEventListener("click", addTask);
